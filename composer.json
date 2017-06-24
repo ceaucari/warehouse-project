@@ -1,0 +1,48 @@
+{
+    "name": "ceaucari/warehouse-project",
+    "description": "Project template for Drupal 8 sites built with the Warehouse distribution.",
+    "type": "project",
+    "authors": [
+        {
+            "name": "César Castillo",
+            "email": "ceaucari@gmail.com",
+            "homepage": "http://www.ceaucari.com",
+            "role": "Developer"
+        }
+    ],
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "license": "GPL-2.0+",
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://packages.drupal.org/8"
+        }
+    ],
+    "require": {
+        "composer/installers": "^1.0",
+        "cweagans/composer-patches": "~1.0",
+        "drupal-composer/drupal-scaffold": "^2.0.0",
+        "acquia/reservoir": "^1.0.0"
+     },
+    "extra": {
+         "installer-paths": {
+          "docroot/core": [
+              "type:drupal-core"
+          ],
+          "docroot/modules/contrib/{$name}": [
+              "type:drupal-module"
+          ],
+          "docroot/profiles/contrib/{$name}": [
+              "type:drupal-profile"
+          ],
+          "docroot/themes/contrib/{$name}": [
+              "type:drupal-theme"
+          ],
+          "drush/contrib/{$name}": [
+              "type:drupal-drush"
+          ]
+        },
+        "enable-patching": true
+    }
+}
